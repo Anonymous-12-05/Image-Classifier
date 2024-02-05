@@ -57,7 +57,15 @@ def overview_page():
 
 def dataset_page():
     st.title("Dataset")
-    st.write("Description of the dataset used.")
+    st.write("The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 classes, with 6,000 images per class.")
+    
+    st.header("Classes")
+    st.write("The dataset contains the following classes:")
+    st.write(classes)
+    
+    st.header("Description")
+    st.write("CIFAR-10 is a widely used dataset for image classification tasks. It contains images across 10 classes, each representing a specific object or animal.")
+
 
 def model_page():
     st.title("Model")

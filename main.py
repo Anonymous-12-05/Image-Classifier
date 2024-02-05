@@ -71,10 +71,6 @@ def model_page():
     st.title("Model")
     st.write("The convolutional neural network (CNN) model used in this project is designed for image classification tasks on the CIFAR-10 dataset.")
 
-    st.header("Model Architecture")
-    st.write("The model architecture consists of the following layers:")
-    
-
     st.header("Convolutional Layers")
     st.write("Convolutional layers are the core building blocks of CNNs, responsible for feature extraction.")
     st.write("- **Convolutional Layer 1:**")

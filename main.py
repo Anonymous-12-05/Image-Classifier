@@ -63,7 +63,36 @@ def predict_image(image):
 
 def overview_page():
     st.title("Overview")
-    st.write("Brief overview of the project.")
+    st.write("This project is an image classification application using the CIFAR-10 dataset and a convolutional neural network (CNN) model.")
+    
+    st.header("Objective")
+    st.write("The objective of this project is to classify images into one of the ten categories present in the CIFAR-10 dataset.")
+
+    st.header("Dataset")
+    st.write("The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 classes, with 6,000 images per class. The dataset is divided into 50,000 training images and 10,000 testing images.")
+
+    st.header("Model")
+    st.write("The convolutional neural network (CNN) model used in this project consists of two convolutional layers with max-pooling followed by two fully connected dense layers. The model architecture is as follows:")
+    st.image("cnn_architecture.png", caption="CNN Architecture", use_column_width=True)
+
+    st.header("Execution")
+    st.write("To use the application, upload an image using the provided file uploader. Once the image is uploaded, click the 'Predict' button to classify the image.")
+
+    st.header("Technology Stack")
+    st.write("The project is built using Python and the following libraries:")
+    st.write("- TensorFlow: For building and training the CNN model.")
+    st.write("- Streamlit: For creating the interactive web application.")
+    st.write("- NumPy: For numerical computations.")
+    st.write("- Matplotlib: For data visualization.")
+    st.write("- PIL (Python Imaging Library): For image processing.")
+
+    st.header("Conclusion")
+    st.write("This project demonstrates the use of deep learning techniques for image classification tasks. It showcases the integration of a trained CNN model into a Streamlit web application, providing a user-friendly interface for image classification.")
+
+    st.header("References")
+    st.write("1. CIFAR-10 dataset: https://www.cs.toronto.edu/~kriz/cifar.html")
+    st.write("2. TensorFlow documentation: https://www.tensorflow.org/")
+    st.write("3. Streamlit documentation: https://docs.streamlit.io/")
 
 def dataset_page():
     st.title("Dataset")

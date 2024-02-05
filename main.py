@@ -96,7 +96,26 @@ def overview_page():
 
 def dataset_page():
     st.title("Dataset")
-    st.write("Description of the dataset used.")
+    st.write("The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 classes, with 6,000 images per class.")
+    
+    st.header("Classes")
+    st.write("The dataset contains the following classes:")
+    st.write(classes)
+    
+    st.header("Sample Images")
+    st.write("Here are some sample images from the dataset:")
+    sample_indices = [100, 200, 300, 400, 500]  # Sample indices for demonstration
+    sample_images = [X_train[i] for i in sample_indices]
+    plot_sample_images(sample_images)
+
+def plot_sample_images(sample_images):
+    fig, axes = plt.subplots(1, len(sample_images), figsize=(15, 3))
+    for i, image in enumerate(sample_images):
+        axes[i].imshow(image)
+        axes[i].axis('off')
+    plt.tight_layout()
+    st.pyplot(fig)
+
 
 def model_page():
     st.title("Model")

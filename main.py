@@ -73,7 +73,7 @@ def overview_page():
 
     st.header("Model")
     st.write("The convolutional neural network (CNN) model used in this project consists of two convolutional layers with max-pooling followed by two fully connected dense layers. The model architecture is as follows:")
-    st.image("cnn_architecture.png", caption="CNN Architecture", use_column_width=True)
+    
 
     st.header("Execution")
     st.write("To use the application, upload an image using the provided file uploader. Once the image is uploaded, click the 'Predict' button to classify the image.")

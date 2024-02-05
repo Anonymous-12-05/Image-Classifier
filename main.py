@@ -69,7 +69,58 @@ def dataset_page():
 
 def model_page():
     st.title("Model")
-    st.write("Description of the model architecture and layers.")
+    st.write("The convolutional neural network (CNN) model used in this project is designed for image classification tasks on the CIFAR-10 dataset.")
+
+    st.header("Model Architecture")
+    st.write("The model architecture consists of the following layers:")
+    
+
+    st.header("Convolutional Layers")
+    st.write("Convolutional layers are the core building blocks of CNNs, responsible for feature extraction.")
+    st.write("- **Convolutional Layer 1:**")
+    st.write("  - Filters: 32")
+    st.write("  - Kernel Size: 3x3")
+    st.write("  - Activation Function: ReLU")
+    st.write("  - Input Shape: 32x32x3 (RGB images)")
+    st.write("- **Max-Pooling Layer 1:**")
+    st.write("  - Pool Size: 2x2")
+    st.write("  - Purpose: Reduces spatial dimensions, retains important features.")
+    st.write("- **Convolutional Layer 2:**")
+    st.write("  - Filters: 64")
+    st.write("  - Kernel Size: 3x3")
+    st.write("  - Activation Function: ReLU")
+    st.write("- **Max-Pooling Layer 2:**")
+    st.write("  - Pool Size: 2x2")
+
+    st.header("Fully Connected Dense Layers")
+    st.write("Fully connected dense layers are responsible for classification based on the extracted features.")
+    st.write("- **Flatten Layer:**")
+    st.write("  - Purpose: Flattens the output from the previous layer into a 1D array.")
+    st.write("- **Dense Layer 1:**")
+    st.write("  - Units: 64")
+    st.write("  - Activation Function: ReLU")
+    st.write("- **Dense Layer 2:**")
+    st.write("  - Units: 10 (Number of classes in CIFAR-10)")
+    st.write("  - Activation Function: Softmax")
+
+    st.header("Optimizer")
+    st.write("The optimizer is responsible for updating the weights of the neural network during training to minimize the loss function.")
+    st.write("- **Optimizer:** Adam")
+    st.write("  - Adaptive Moment Estimation (Adam) is an adaptive learning rate optimization algorithm.")
+
+    st.header("Loss Function")
+    st.write("The loss function computes the error between the predicted and actual labels during training.")
+    st.write("- **Loss Function:** Sparse Categorical Crossentropy")
+    st.write("  - Used for multi-class classification tasks with integer labels.")
+
+    st.header("Metrics")
+    st.write("Metrics are used to evaluate the performance of the model.")
+    st.write("- **Metrics:** Accuracy")
+    st.write("  - Measures the proportion of correctly classified images.")
+
+    st.header("Conclusion")
+    st.write("This section provides a detailed explanation of the model architecture, optimizer, loss function, and metrics used in the CNN model for image classification.")
+
 
 def execution_page():
     st.title("Execution")
